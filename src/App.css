@@ -1,0 +1,25 @@
+:root {
+  --primary: #105E46;
+  --accent: #12805D;
+  --success: #02D693;
+  --light: #BFD1E5;
+  --tertiary: #60695C;
+  --dark: #1A1F16;
+  --placeholder: rgba(26, 31, 22, 0.5);
+  --white: #FFFFFF;
+  --danger: #E5252C;
+  --warning: #E6D117;
+  --shadow1: 0px 4px 16px rgba(26, 31, 22, 0.15);
+
+}
+::-webkit-scrollbar {
+  /* height: 12px; */
+  width: 6px;
+  background: inherit;
+  border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--placeholder);
+  border-radius: 1ex;
+}
