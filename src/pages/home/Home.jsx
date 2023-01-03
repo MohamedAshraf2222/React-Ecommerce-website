@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Bag from '../../components/Bag'
 import SideBar from '../../components/SideBar'
 import { data } from "../../data/data";
@@ -19,12 +20,16 @@ const Home = () => {
                     </div>
                     <div className='grid grid-content gap-8 mx-12'>
                         {data.map((product, i) => (
-                            <div className={(product.type==='laptop'? 'span-laptop':'')}>
-                                <div className={"bg-white content flex items-center justify-center "}>
-                                    <img className='h-52 p-4' src={product.image} alt="" />
-                                </div>
+                            <div className={(product.type === 'laptop' ? 'span-laptop' : '')}>
+                                <Link to={`/itemview/${product.id}`}>
+                                    <div className={"bg-white content flex items-center justify-center "}>
+                                        <img className='h-52 p-4' src={product.image} alt="" />
+                                    </div>
+                                </Link>
                                 <div className='content-detail flex flex-col mt-4 gap-2'>
-                                    <span>{product.name}</span>
+                                    <Link to={`/itemview/${product.id}`}>
+                                        <span>{product.name}</span>
+                                    </Link>
                                     <span>{product.detail}</span>
                                     <div className='flex justify-between m-2 items-center'>
                                         <span>{product.prise}</span>

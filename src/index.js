@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './input.css'
 import './output.css'
+import './pages/item-view/itemview.css';
 import './index.css';
 import './pages/home/home.css'
 import App from './App';
