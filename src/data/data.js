@@ -17,14 +17,18 @@ import laptop4 from '../assets/laptop-4.png';
 import watch1 from '../assets/watch-1.png';
 import headphone1 from '../assets/headphone-1.png';
 
-
+const descriptionText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Dignissim odio faucibus nec malesuada purus volutpat vel sed viverra. Id sagittis,phasellus dui in arcu. Nec arcu, sit nunc, nibh purus pellentesque sagittis. Felis rhoncus facilisis massa eget purus in purus. Etiam at cras nulla nunc. Malesuada in pretium diam scelerisque sit mattis in egestas neque. Eu porta tempor sodales nisl integer turpis porttitor sed sed. Ut senectus odio dictum enim velit tempor diam quisque suspendisse.\nOrci vel ridiculus diam viverra. Libero malesuada orci, quis placerat suscipit augue imperdiet. Et praesent augue dictum mauris eget lacus malesuada. Aenean nisi, sodales natoque massa magna dignissim mi. Mattis tellus, justo, lorem sed tempor diam sit viverra enim. Id id placerat eu etiam nulla laoreet.\nDignissim leo fames turpis quis suspendisse vulputate laoreet vulputate ac. Aliquam justo lectus eu dui porttitor. Cras a aliquam phasellus sollicitudin ornare. Tristique volutpat facilisis in ut proin. Est vitae facilisi sollicitudin id lorem mattis nibh ipsum, nec. Consectetur consectetur morbi morbi aliquet mi risus, velit, sit at. \nInteger morbi viverra hendrerit risus.\nOdio phasellus nibh senectus nec id enim quam sed. At potenti sollicitudin sollicitudin lobortis morbi. Nunc molestie et adipiscing aliquam. Sit vel mi dolor suscipit. In eget ut ac at facilisi leo viverra. Arcu ac ut fermentum, viverra et, vitae etiam cras. Eu purus non ut turpis fusce. Mi vitae nibh mi ut feugiat varius risus eros.'
+const bagDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam '
 export const data = [{
     id: 61101,
     rate: 4.5,
     image: watch1,
     name: 'Apple Watch',
     detail: 'Series 5 SE',
-    prise: '$ 529.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 529.99,
     type: 'watch',
 },
 {
@@ -33,7 +37,10 @@ export const data = [{
     image: headphone1,
     name: 'Sony ZX330BT',
     detail: 'Light Grey',
-    prise: '$ 39.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 39.99,
     type: 'headphone',
 }
     , {
@@ -42,7 +49,10 @@ export const data = [{
     image: iphone1,
     name: 'Iphone 11',
     detail: 'Serious Black',
-    prise: '$ 619.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 619.99,
     type: 'iphone',
 }
     , {
@@ -51,7 +61,10 @@ export const data = [{
     image: iphone2,
     name: 'Iphone 11',
     detail: 'Subway Blue',
-    prise: '$ 619.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 619.99,
     type: 'iphone',
 }
     , {
@@ -60,7 +73,10 @@ export const data = [{
     image: laptop1,
     name: 'Macbook Pro 16”',
     detail: 'Silver - M1 Pro',
-    prise: '$ 3249.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 3249.99,
     type: 'laptop',
 }
     , {
@@ -69,7 +85,10 @@ export const data = [{
     image: iphone3,
     name: 'Iphone 11',
     detail: 'Product RED',
-    prise: '$ 619.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 619.99,
     type: 'iphone',
 }
     , {
@@ -78,7 +97,10 @@ export const data = [{
     image: iphone4,
     name: 'Iphone 11',
     detail: 'Milky White',
-    prise: '$ 619.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 619.99,
     type: 'iphone',
 }
     , {
@@ -87,7 +109,10 @@ export const data = [{
     image: iphone5,
     name: 'Iphone 12',
     detail: 'Rose Pink',
-    prise: '$ 729.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 729.99,
     type: 'iphone',
 }
     , {
@@ -96,7 +121,10 @@ export const data = [{
     image: iphone6,
     name: 'Iphone 12',
     detail: 'Navy Blue',
-    prise: '$ 729.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 729.99,
     type: 'iphone',
 }
     , {
@@ -105,7 +133,10 @@ export const data = [{
     image: laptop3,
     name: 'Dell XPS 15 2-in-1',
     detail: 'Midnight Gray',
-    prise: '$ 3199.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 3199.99,
     type: 'laptop',
 }
     , {
@@ -114,7 +145,10 @@ export const data = [{
     image: iphone7,
     name: 'Iphone 13 Pro',
     detail: 'Silly Silver',
-    prise: '$ 1029.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 1029.99,
     type: 'iphone',
 }
     , {
@@ -123,7 +157,10 @@ export const data = [{
     image: iphone8,
     name: 'Iphone 13 Pro',
     detail: 'Grey',
-    prise: '$ 1029.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 1029.99,
     type: 'iphone',
 }
     , {
@@ -132,7 +169,10 @@ export const data = [{
     image: samsung1,
     name: 'Samsung Galaxy Note 21 ',
     detail: '2 - Options',
-    prise: '$ 999.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 999.99,
     type: 'samsung',
 }
     , {
@@ -141,7 +181,10 @@ export const data = [{
     image: samsung2,
     name: 'Samsung Galaxy S21+',
     detail: 'Lilac Purple',
-    prise: '$ 849.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 849.99,
     type: 'samsung',
 }
     , {
@@ -150,7 +193,10 @@ export const data = [{
     image: laptop4,
     name: 'Dell XPS 13',
     detail: 'White',
-    prise: '$ 1799.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 1799.99,
     type: 'laptop',
 }
     , {
@@ -159,7 +205,10 @@ export const data = [{
     image: laptop2,
     name: 'Dell XPS 15',
     detail: 'Light Grey',
-    prise: '$ 1899.99',
+    description: descriptionText,
+    bagDescription: bagDescription,
+    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc volutpat, tincidunt lorem mi duis. Vitae elementum libero.',
+    price: 1899.99,
     type: 'laptop',
 }
 ]

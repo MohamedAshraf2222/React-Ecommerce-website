@@ -1,3 +1,105 @@
-.MuiRating-root{
+.MuiRating-root {
     color: var(--accent) !important;
+}
+
+.itemview-content {
+    padding: 48px 66px 0 66px;
+}
+
+.back-text {
+    font-size: 20px;
+    line-height: 24.3px;
+}
+.itemview-img-small{
+    grid-template-rows: 21% 21% 21% auto;
+}
+.itemview-img-small>img {
+    background-color: white;
+    border-radius: 13px;
+    width: 49.66px;
+    height: 58px;
+}
+.itemview-bg-small{
+    background-color: white;
+    border-radius: 13px;
+    display: flex;
+}
+.itemview-bg-big{
+    background-color: white;
+    border-radius: 13px;
+    display: flex;
+}
+.itemview-bg-big>img{
+    padding: 8px;
+    object-fit: contain;
+}
+.itemview-bg-small>img{
+    padding: 8px;
+    width: 60px;
+    object-fit: contain;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.bg-img-itemview>img {
+    padding: 8px;
+}
+
+.itemview-grid {
+    display: grid;
+    grid-template-columns: 35% auto;
+}
+
+.itemview-name-font {
+    font-size: 61.04px;
+    line-height: 74px;
+    color: var(--dark);
+}
+
+.itemview-detail-font {
+    font-size: 31.25px;
+    line-height: 38px;
+    color: var(--placeholder);
+}
+
+.itemview-rating-font {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+}
+
+.itemview-prise-font {
+    font-weight: 500;
+    font-size: 31.25px;
+    line-height: 38px;
+}
+
+.itemview-shortdescription-font {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.hr {
+    background-color: var(--placeholder);
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    height: 3px;
+}
+
+.itemview-description>span {
+    font-weight: 500;
+    font-size: 31.25px;
+    line-height: 38px;
+}
+
+.itemview-description>p {
+    color: var(--tertiary);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.3px;
+    letter-spacing: -0.02em;
+    white-space: pre-wrap;
+
 }

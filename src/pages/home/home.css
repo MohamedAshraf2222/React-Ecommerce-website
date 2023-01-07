@@ -107,3 +107,9 @@
 .span-laptop {
   grid-column: 2 span;
 }
+.vertical-line{
+  height: 90vh;
+  margin-top: 5vh ;
+  width: 4px;
+  background-color: var(--placeholder);
+}

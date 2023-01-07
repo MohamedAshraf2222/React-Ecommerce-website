@@ -1,0 +1,44 @@
+.totalprice-font {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--dark);
+}
+
+.bagpage-content > span {
+  font-size: 48.83px;
+  line-height: 59px;
+  color: var(--dark);
+}
+
+.bg-box-bag {
+  border-radius: 21px;
+  height: 288px;
+}
+
+.bg-box-bag > div {
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+
+.bg-box-bag > div > img {
+  object-fit: contain;
+  justify-self: center;
+  height: 250px;
+}
+
+.box-bag-content {
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--dark);
+}
+.box-bag-content > :nth-child(3) {
+  letter-spacing: -0.02em;
+}
+.box-bag-content > :first-child {
+  font-size: 31.25px;
+  line-height: 38px;
+}
+.box-bag-content > :nth-child(2) {
+  color: var(--tertiary);
+}
