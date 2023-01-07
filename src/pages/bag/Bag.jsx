@@ -39,6 +39,7 @@ const Bag = () => {
         <div className="bagpage-content mt-14 ml-20 mr-12">
           <span>Check your Bag Items</span>
           <div className="flex flex-col gap-6 mt-9 mb-10">
+            {/* {bagItems.filter(())} */}
             {bagItems.map((product) => (
               <>
                 {/* {product.id  ? (
