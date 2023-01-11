@@ -22,6 +22,7 @@ const bagDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit 
 export const data = [{
     id: 61101,
     rate: 4.5,
+    quantity:0,
     image: watch1,
     name: 'Apple Watch',
     detail: 'Series 5 SE',
@@ -34,6 +35,7 @@ export const data = [{
 {
     id: 61102,
     rate: 4.5,
+    quantity:0,
     image: headphone1,
     name: 'Sony ZX330BT',
     detail: 'Light Grey',
@@ -46,6 +48,7 @@ export const data = [{
     , {
     id: 61103,
     rate: 4.0,
+    quantity:0,
     image: iphone1,
     name: 'Iphone 11',
     detail: 'Serious Black',
@@ -58,6 +61,7 @@ export const data = [{
     , {
     id: 61104,
     rate: 5,
+    quantity:0,
     image: iphone2,
     name: 'Iphone 11',
     detail: 'Subway Blue',
@@ -70,6 +74,7 @@ export const data = [{
     , {
     id: 61105,
     rate: 4.5,
+    quantity:0,
     image: laptop1,
     name: 'Macbook Pro 16”',
     detail: 'Silver - M1 Pro',
@@ -82,6 +87,7 @@ export const data = [{
     , {
     id: 61106,
     rate: 4.0,
+    quantity:0,
     image: iphone3,
     name: 'Iphone 11',
     detail: 'Product RED',
@@ -94,6 +100,7 @@ export const data = [{
     , {
     id: 61107,
     rate: 5,
+    quantity:0,
     image: iphone4,
     name: 'Iphone 11',
     detail: 'Milky White',
@@ -106,6 +113,7 @@ export const data = [{
     , {
     id: 61108,
     rate: 4.0,
+    quantity:0,
     image: iphone5,
     name: 'Iphone 12',
     detail: 'Rose Pink',
@@ -118,6 +126,7 @@ export const data = [{
     , {
     id: 61109,
     rate: 5,
+    quantity:0,
     image: iphone6,
     name: 'Iphone 12',
     detail: 'Navy Blue',
@@ -130,6 +139,7 @@ export const data = [{
     , {
     id: 611010,
     rate: 4.5,
+    quantity:0,
     image: laptop3,
     name: 'Dell XPS 15 2-in-1',
     detail: 'Midnight Gray',
@@ -142,6 +152,7 @@ export const data = [{
     , {
     id: 611011,
     rate: 4.0,
+    quantity:0,
     image: iphone7,
     name: 'Iphone 13 Pro',
     detail: 'Silly Silver',
@@ -154,6 +165,7 @@ export const data = [{
     , {
     id: 611012,
     rate: 5,
+    quantity:0,
     image: iphone8,
     name: 'Iphone 13 Pro',
     detail: 'Grey',
@@ -166,6 +178,7 @@ export const data = [{
     , {
     id: 611013,
     rate: 5,
+    quantity:0,
     image: samsung1,
     name: 'Samsung Galaxy Note 21 ',
     detail: '2 - Options',
@@ -178,6 +191,7 @@ export const data = [{
     , {
     id: 611014,
     rate: 4.5,
+    quantity:0,
     image: samsung2,
     name: 'Samsung Galaxy S21+',
     detail: 'Lilac Purple',
@@ -190,6 +204,7 @@ export const data = [{
     , {
     id: 611015,
     rate: 4.5,
+    quantity:0,
     image: laptop4,
     name: 'Dell XPS 13',
     detail: 'White',
@@ -202,6 +217,7 @@ export const data = [{
     , {
     id: 611016,
     rate: 5,
+    quantity:0,
     image: laptop2,
     name: 'Dell XPS 15',
     detail: 'Light Grey',

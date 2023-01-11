@@ -15,46 +15,112 @@ export const BagContextProvider = (props) => {
   const SetItem = (id) => {
     const item = data.find((pro) => pro.id == id);
     const allItems = [...bagItems];
-    allItems.push(item);
+    let condition = false;
+    let i = 0;
+    for (i = 0; i < allItems.length; i++) {
+      if (allItems[i].id === id) {
+        condition = true;
+      }
+    }
+    if (condition) {
+      allItems[i - 1].quantity = allItems[i - 1].quantity + 1;
+    } else if (!condition) {
+      allItems.push(item);
+      allItems[i].quantity = allItems[i].quantity + 1;
+    }
     setBagItems(allItems);
-
     localStorage.setItem("BagItems", JSON.stringify(allItems));
-    const x = localStorage.getItem("BagItems");
-    console.log(x);
+    // } else {
+    //   for (let i = 0; i < allItems.length; i++) {
+    //     if (!allItems[i].id === id) {
+    //       allItems.push(item);
+    //       allItems[i].quantity = 1;
+    //       break;
+    //     } else {
+    //       allItems[i].quantity = allItems[i].quantity + 1;
+    //       console.log("else");
+    //     }
+    //   }
+    // }
+    // console.log(allItems);
+    // console.log(allItems[0]);
+    // localStorage.setItem("BagItems", JSON.stringify(allItems));
+    // const x = localStorage.getItem("BagItems");
+    // console.log(x);
   };
 
   const TotalPrice = () => {
     let total = 0;
     let bagData = JSON.parse(localStorage.getItem("BagItems"));
     for (let i = 0; i < bagData.length; i++) {
-      total = total + bagData[i].price;
+      total = total + bagData[i].price * bagData[i].quantity;
     }
     total = Math.round(total * 100) / 100;
     setTotalPrice(total);
   };
-  const RatingValue = () => {
-    let bagData = JSON.parse(localStorage.getItem("BagItems"));
+  const RatingValue = (id) => {
+    // let bagData = JSON.parse(localStorage.getItem("BagItems"));
+    const item = data.find((pro) => pro.id == id);
+    let ratevvv = item.rate;
+    return ratevvv;
   };
-  const Countproducts = (id) => {
-    let bagData = JSON.parse(localStorage.getItem("BagItems"));
-    let count = 0;
-    for (let i = 0; i < bagData.length; i++) {
-      if (bagData[i].id == id) {
-        count = count + 1;
+  const IncreaseQuantity = (id) => {
+    const allItems = [...bagItems];
+    let i = 0;
+    for (i = 0; i < allItems.length; i++) {
+      if (allItems[i].id === id) {
+        break;
       }
-      return count + 1;
     }
+    allItems[i].quantity += 1;
+    setBagItems(allItems);
+    localStorage.setItem("BagItems", JSON.stringify(allItems));
+  };
+  const DecreaseQuantity = (id) => {
+    const allItems = [...bagItems];
+    let i = 0;
+    for (i = 0; i < allItems.length; i++) {
+      if (allItems[i].id === id) {
+        break;
+      }
+    }
+    allItems[i].quantity -= 1;
+    setBagItems(allItems);
+    localStorage.setItem("BagItems", JSON.stringify(allItems));
+  };
+  const DeleteProduct = (id) => {
+    const item = [...bagItems];
+    let i = 0;
+    for (i = 0; i < item.length; i++) {
+      if (item[i].quantity === 0) {
+        item.splice(i, 1);
+      }
+    }
+
+    setBagItems(item);
+    localStorage.setItem("BagItems", JSON.stringify(item));
   };
 
-//   const displaycount = (id) => {
-//     let bagData = JSON.parse(localStorage.getItem("BagItems"));
-//     for (let i = 0; i < bagData.length; i++) {
-//         if (bagData[i].id == id) {
-//           count = count + 1;
-//         }
-//         return count + 1;
-//       }
-//   };
+  //   const Countproducts = (id) => {
+  //     let bagData = JSON.parse(localStorage.getItem("BagItems"));
+  //     let count = 0;
+  //     for (let i = 0; i < bagData.length; i++) {
+  //       if (bagData[i].id == id) {
+  //         count = count + 1;
+  //       }
+  //       return count + 1;
+  //     }
+  //   };
+
+  //   const displaycount = (id) => {
+  //     let bagData = JSON.parse(localStorage.getItem("BagItems"));
+  //     for (let i = 0; i < bagData.length; i++) {
+  //         if (bagData[i].id == id) {
+  //           count = count + 1;
+  //         }
+  //         return count + 1;
+  //       }
+  //   };
 
   return (
     <BagItemsContext.Provider
@@ -66,8 +132,11 @@ export const BagContextProvider = (props) => {
         TotalPrice,
         totalPrice,
         value,
+        setValue,
         RatingValue,
-        Countproducts,
+        IncreaseQuantity,
+        DecreaseQuantity,
+        DeleteProduct,
       }}
     >
       {props.children}

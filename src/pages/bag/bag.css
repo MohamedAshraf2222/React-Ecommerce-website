@@ -42,3 +42,10 @@
 .box-bag-content > :nth-child(2) {
   color: var(--tertiary);
 }
+.quantity-bag > button {
+  font-size: 30px;
+  color: var(--success);
+}
+.quantity-bag > :first-child {
+  color: var(--danger);
+}

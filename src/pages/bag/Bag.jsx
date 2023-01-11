@@ -17,21 +17,27 @@ const Bag = () => {
     value,
     setValue,
     RatingValue,
-    Countproducts,
+    IncreaseQuantity,
+    DecreaseQuantity,
+    DeleteProduct,
   } = useContext(BagItemsContext);
   const [hover, setHover] = React.useState(-1);
   useEffect(() => {
     if (localStorage.getItem("BagItems")) {
       SaveItems();
       TotalPrice();
-      RatingValue();
+      // RatingValue();
       // Countproducts();
     }
   }, []);
+  useEffect(() => {
+    // SaveItems();
+    TotalPrice();
+  }, [DecreaseQuantity, IncreaseQuantity]);
   // useEffect(() => {
-  //   Countproducts();
+  //   DeleteProduct();
+  // }, [DecreaseQuantity])
 
-  // }, [productCount]);
   return (
     <>
       <div className="grid grid-home">
@@ -45,6 +51,9 @@ const Bag = () => {
                 {/* {product.id  ? (
                   ""
                 ) : ( */}
+                {product.quantity == 0 ? (
+                  ""
+                ) : (
                   <div className="bg-white bg-box-bag">
                     <div className="py-4 px-6 gap-4">
                       <img src={product.image} alt="" />
@@ -59,7 +68,7 @@ const Bag = () => {
                             precision={0.5}
                             // getLabelText={getLabelText}
                             onChange={(event, newValue) => {
-                              setValue(newValue);
+                              setValue(bagItems.rate);
                             }}
                             onChangeActive={(event, newHover) => {
                               setHover(newHover);
@@ -77,13 +86,31 @@ const Bag = () => {
                         </div>
                         <div className="flex justify-between mt-5">
                           <span>
-                            $ {product.price} x {Countproducts(product.id)}
+                            $ {product.price} x {product.quantity}
                           </span>
-                          <div className="mr-10">{Countproducts(product.id)}</div>
+                          <div className="quantity-bag flex gap-6 mr-10">
+                            <button
+                              onClick={
+                                (() => (DecreaseQuantity(product.id),
+                                DeleteProduct(product.id)))
+                              }
+                            >
+                              -
+                            </button>
+                            {product.quantity}
+                            <button
+                              onClick={
+                                (() => IncreaseQuantity(product.id))
+                              }
+                            >
+                              +
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                )}
                 {/* )} */}
               </>
             ))}
@@ -104,7 +131,7 @@ const Bag = () => {
               <span className="mt-8 totalprice-font">
                 Bag Total: $ {totalPrice}
               </span>
-              <Link className="mt-8" to={"/bag"}>
+              <Link className="mt-8" to={"/checkout"}>
                 <button className="btn-bag flex gap-2 items-center">
                   <svg
                     width="20"

@@ -21,6 +21,8 @@
   font-size: 39.06px;
   font-weight: 500;
   margin-bottom: 26px;
+  width: 16.5vw;
+  text-align: center;
 }
 
 .bag-content>div {
@@ -63,7 +65,7 @@
 /************************ Home ************************/
 
 .grid-home {
-  grid-template-columns: max-content auto max-content;
+  grid-template-columns: max-content auto 22%;
 }
 
 .search-item>div>input {
