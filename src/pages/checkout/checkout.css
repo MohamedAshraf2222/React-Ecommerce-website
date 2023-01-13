@@ -1,0 +1,16 @@
+.checkout {
+  padding-left: 102px;
+  padding-right: 102px;
+  grid-template-columns: auto auto;
+  gap: 102px;
+}
+
+.bg-bag-checkout {
+  border-radius: 13px;
+}
+.text-heading-checkout{
+  font-weight: 400;
+  font-size: 31.25px;
+  line-height: 38px;
+  letter-spacing: 0.25em;
+}
