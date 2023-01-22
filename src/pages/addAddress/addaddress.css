@@ -1,0 +1,24 @@
+.addaddress-content {
+  border-radius: 15px;
+  color: var(--placeholder);
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+}
+.addaddress-content input {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+  box-shadow: var(--shadow1);
+  border-radius: 13px;
+}
+.addaddress-back {
+  text-decoration-line: underline;
+}
+.secure-connection-text {
+  color: var(--accent);
+}
+/* Add Payment */
+.input-checkbox-addpayment{
+    color: var(--dark);
+}

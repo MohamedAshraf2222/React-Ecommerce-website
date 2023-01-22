@@ -8,9 +8,96 @@
 .bg-bag-checkout {
   border-radius: 13px;
 }
-.text-heading-checkout{
+.text-heading-checkout {
   font-weight: 400;
   font-size: 31.25px;
   line-height: 38px;
   letter-spacing: 0.25em;
+  color: var(--dark);
+}
+.address-font {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.address-font > div > span {
+  color: var(--tertiary);
+}
+.btn-checkout {
+  font-size: 16px;
+  border: 1px solid var(--dark);
+  border-radius: 11px;
+  padding: 8px 24px;
+}
+.checkbox {
+  color: var(--accent);
+}
+/* .label-border {
+  border: 1px solid var(--tertiary);
+  width: 16px;
+  height: 16px;
+  position: relative;
+  border-radius: 2px;
+} */
+.label-border {
+  /* border: 1px solid var(--tertiary); */
+  width: 11px;
+  height: 11px;
+  margin-top: 1.5px;
+  margin-left: 2px;
+  /* position: relative; */
+  border-radius: 1px;
+  background-color: inherit;
+}
+.checkbox-label {
+  border: 1px solid var(--tertiary);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + .checkbox-label .label-border {
+  background-color: var(--accent);
+}
+.order-summary {
+  border-radius: 12px;
+  width: 250px;
+  height: max-content;
+}
+.order-summary > h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--dark);
+}
+.order-summary > div {
+  color: var(--tertiary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+}
+.line-order-summary {
+  background-color: var(--light);
+  height: 0.5px;
+}
+.order-summary > div > :nth-child(6) {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--danger);
+}
+.btn-order-summary {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+}
+.line-items {
+  background-color: var(--placeholder);
+  height: 1.2px;
+  width: 90%;
+  margin: auto;
 }

@@ -6,6 +6,7 @@ export const BagItemsContext = createContext();
 export const BagContextProvider = (props) => {
   const [bagItems, setBagItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPriceSummary, setTotalPriceSummary] = useState(0);
   const [value, setValue] = useState(4);
 
   const SaveItems = () => {
@@ -57,6 +58,12 @@ export const BagContextProvider = (props) => {
     }
     total = Math.round(total * 100) / 100;
     setTotalPrice(total);
+  };
+  const TotalPriceSummary = () => {
+    TotalPrice();
+    let total = totalPrice + 6.99 + 760.41;
+    total = Math.round(total * 100) / 100;
+    setTotalPriceSummary(total);
   };
   const RatingValue = (id) => {
     // let bagData = JSON.parse(localStorage.getItem("BagItems"));
@@ -137,6 +144,8 @@ export const BagContextProvider = (props) => {
         IncreaseQuantity,
         DecreaseQuantity,
         DeleteProduct,
+        TotalPriceSummary,
+        totalPriceSummary,
       }}
     >
       {props.children}
