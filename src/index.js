@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'font-awesome/css/font-awesome.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+// import 'font-awesome/css/font-awesome.min.css';
 import './input.css'
 import './output.css'
 import './pages/item-view/itemview.css';
@@ -10,6 +9,7 @@ import './pages/home/home.css'
 import './pages/bag/bag.css'
 import './pages/checkout/checkout.css'
 import './pages/addAddress/addaddress.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { BagContextProvider } from './context/Store';

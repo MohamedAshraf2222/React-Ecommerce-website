@@ -1,0 +1,30 @@
+.svg-cardnumber {
+  position: absolute;
+  /* top: 45px;
+  left: 20px; */
+  top: 52%;
+  left: 3.5%;
+}
+.svg-expiredate {
+  position: absolute;
+  /* top: 45px;
+    left: 20px; */
+  top: 52%;
+  left: 10%;
+}
+
+.heading-payment {
+  font-weight: 400;
+  font-size: 31.25px;
+  line-height: 38px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+.font-selectcard {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
