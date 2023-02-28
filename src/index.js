@@ -9,6 +9,7 @@ import './pages/home/home.css'
 import './pages/bag/bag.css'
 import './pages/checkout/checkout.css'
 import './pages/addAddress/addaddress.css'
+import './pages/login/login.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';

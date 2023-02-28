@@ -1,4 +1,6 @@
+import jwtDecode from "jwt-decode";
 import { createContext, useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 import { data } from "../data/data";
 
 export const BagItemsContext = createContext();
@@ -9,6 +11,17 @@ export const BagContextProvider = (props) => {
   const [totalPriceSummary, setTotalPriceSummary] = useState(0);
   const [value, setValue] = useState(4);
 
+  const [userData, setUserData] = useState(null)
+  function logout() {
+    setUserData(null);
+    localStorage.removeItem('userToken');
+    Navigate('/login');
+  }
+  function SaveUserData() {
+    let encodedToken = localStorage.getItem('userToken');
+    let decodedToken = jwtDecode(encodedToken);
+    setUserData(decodedToken);
+  }
   const SaveItems = () => {
     const item = JSON.parse(localStorage.getItem("BagItems"));
     setBagItems(item);
@@ -132,6 +145,8 @@ export const BagContextProvider = (props) => {
   return (
     <BagItemsContext.Provider
       value={{
+        SaveUserData,
+        logout,
         bagItems,
         setBagItems,
         SaveItems,
