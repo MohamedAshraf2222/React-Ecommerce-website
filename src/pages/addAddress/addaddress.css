@@ -22,3 +22,46 @@
 .input-checkbox-addpayment{
     color: var(--dark);
 }
+@media screen and (max-width: 1280px) {
+  .addaddress-content>div{
+    margin: 0;
+  }
+  .addaddress-content{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .addaddress-content{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .addaddress-content input{
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  .addaddress-content>div{
+    /* padding: 0; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .addaddress-content{
+    width: 85%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .addaddress-content{
+    font-size: 14px;
+  }
+  
+  .addaddress-content input{
+    font-size: 14px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+  
+}

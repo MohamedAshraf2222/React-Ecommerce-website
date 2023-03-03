@@ -1,8 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { IoCard } from "react-icons/io5";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee as fasFaCoffee } from "@fortawesome/fontawesome-svg-core";
 import "./addpayment.css";
 
 const Addpayment = () => {

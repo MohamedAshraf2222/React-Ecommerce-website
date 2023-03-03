@@ -107,7 +107,7 @@ const Checkout = () => {
               </Link>
             </div>
           </div>
-          <div className="bagpage-content bg-bag-checkout bg-white">
+          <div className="bagpage-content checkout-bagpage-content bg-bag-checkout bg-white">
             <p className="p-6 text-heading-checkout">Review you Bag</p>
             <div className="flex flex-col gap-6 mt-9 mb-10">
               {bagItems.map((product) => (
@@ -200,7 +200,7 @@ const Checkout = () => {
               </Link>
             </div>
           </div>
-          <Link className="self-end mr-24 mt-6" to={"/bag"}>
+          <Link className="btn-order-summary-back" to={"/bag"}>
             <button className="text-base btn-checkout gap-2 flex">
               <svg
                 width="24"

@@ -101,3 +101,52 @@ input[type="checkbox"]:checked + .checkbox-label .label-border {
   width: 90%;
   margin: auto;
 }
+.btn-order-summary-back {
+  margin-top: 1.5rem;
+  margin-right: 6rem;
+  align-self: flex-end;
+}
+@media screen and (max-width: 1080px) {
+  .btn-order-summary-back {
+    margin-top: 1.5rem;
+    margin-right: 0;
+    align-self: flex-start;
+  }
+  .checkout {
+    display: flex;
+    flex-direction: column;
+  }
+  .order-summary {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .checkout-bagpage-content {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+  .checkout {
+    padding: 3.5rem 50px;
+  }
+  .text-heading-checkout {
+    font-size: 26px;
+  }
+  .address-font {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .checkout {
+    padding: 3rem 40px;
+  }
+  .text-heading-checkout > :nth-child(2) {
+    flex-direction: column;
+  }
+  .text-heading-checkout > :nth-child(2) > :nth-child(2) {
+    margin-top: 16px;
+    align-self: flex-end;
+  }
+  .address-font {
+    font-size: 16px;
+  }
+}
