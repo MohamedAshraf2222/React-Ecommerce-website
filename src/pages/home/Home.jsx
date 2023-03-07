@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Bag from "../../components/Bag";
 import SideBar from "../../components/SideBar";
 import { BagItemsContext } from "../../context/Store";
 import { data } from "../../data/data";
+
 
 const Home = () => {
   const [bag, setBag] = useState(false);
@@ -29,7 +31,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="grid grid-home">
+      <motion.div className="grid grid-home"
+        initial={{width: '0'}}
+        animate={{width: '100%'}}
+        exit = {{x : window.innerWidth,transition:{duration:0.2}}}
+      >
         <SideBar />
         <div className="content my-8 relative">
           <div className="flex justify-center items-center">
@@ -137,7 +143,7 @@ const Home = () => {
           </div>
         </div>
         <Bag />
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -7,31 +7,25 @@ import StarIcon from "@mui/icons-material/Star";
 import { green } from "@mui/material/colors";
 import { data } from "../../data/data";
 import { BagItemsContext } from "../../context/Store";
+import { motion } from "framer-motion";
 
 const ItemView = () => {
   const { SaveItems, SetItem, RatingValue } = useContext(BagItemsContext);
   const [item, setItem] = useState({});
-  // const [resultObject, setResultObject] = useState(null);
   let RatingV;
   const [value, setValue] = React.useState(item.rate);
   const [hover, setHover] = React.useState(-1);
   const params = useParams();
   const GetItem = () => {
     const item = data.find((pro) => pro.id == params.id);
-    // console.log(item);
     setItem(item);
     RatingV = item.rate;
   };
 
-  // useEffect(() => {
-  // }, [])
 
   useEffect(() => {
     GetItem();
-    // console.log(RatingV);
     setValue(item.rate);
-    // let e= RatingValue(item.id)
-    // console.log(e);
 }, [params.id]);
   useEffect(() => {
     if (localStorage.getItem("BagItems")) {
@@ -42,7 +36,11 @@ const ItemView = () => {
   }, []);
   return (
     <>
-      <div className="grid grid-home">
+      <motion.div className="grid grid-home"
+        initial={{width: '0'}}
+        animate={{width: '100%'}}
+        exit = {{x : window.innerWidth,transition:{duration:0.2}}}
+      >
         <SideBar />
         <div className="itemview-content">
           <Link className="flex mb-6" to={"/home"}>
@@ -137,7 +135,7 @@ const ItemView = () => {
           </div>
         </div>
         <Bag />
-      </div>
+      </motion.div>
     </>
   );
 };
