@@ -8,14 +8,24 @@ import { data } from "../../data/data";
 const Home = () => {
   const [bag, setBag] = useState(false);
 
-  const { bagItems, setBagItems, SaveItems, SetItem } =
-    useContext(BagItemsContext);
+  const {
+    bagItems,
+    setBagItems,
+    SaveItems,
+    SetItem,
+    totalItems,
+    ItemsNumbers,
+  } = useContext(BagItemsContext);
 
   useEffect(() => {
     if (localStorage.getItem("BagItems")) {
       SaveItems();
+      ItemsNumbers();
     }
   }, []);
+  // useEffect(() => {
+  //     ItemsNumbers();
+  // }, [SetItem]);
 
   return (
     <>
@@ -32,6 +42,7 @@ const Home = () => {
                 />
               </div>
               <div className="relative">
+                <div className="items-number">{totalItems}</div>
                 <svg
                   onClick={() => setBag(!bag)}
                   className="bag-icon"

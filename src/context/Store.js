@@ -8,23 +8,32 @@ export const BagItemsContext = createContext();
 export const BagContextProvider = (props) => {
   const [bagItems, setBagItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
   const [totalPriceSummary, setTotalPriceSummary] = useState(0);
   const [value, setValue] = useState(4);
 
-  const [userData, setUserData] = useState(null)
+  const [userData, setUserData] = useState(null);
   function logout() {
     setUserData(null);
-    localStorage.removeItem('userToken');
-    Navigate('/login');
+    localStorage.removeItem("userToken");
+    Navigate("/login");
   }
   function SaveUserData() {
-    let encodedToken = localStorage.getItem('userToken');
+    let encodedToken = localStorage.getItem("userToken");
     let decodedToken = jwtDecode(encodedToken);
     setUserData(decodedToken);
   }
   const SaveItems = () => {
     const item = JSON.parse(localStorage.getItem("BagItems"));
     setBagItems(item);
+  };
+  const ItemsNumbers = () => {
+    let totalItems = 0;
+    let bagData = JSON.parse(localStorage.getItem("BagItems"));
+    for (let i = 0; i < bagData.length; i++) {
+      totalItems = totalItems + bagData[i].quantity;
+    }
+    setTotalItems(totalItems);
   };
   const SetItem = (id) => {
     const item = data.find((pro) => pro.id == id);
@@ -44,6 +53,7 @@ export const BagContextProvider = (props) => {
     }
     setBagItems(allItems);
     localStorage.setItem("BagItems", JSON.stringify(allItems));
+    ItemsNumbers();
     // } else {
     //   for (let i = 0; i < allItems.length; i++) {
     //     if (!allItems[i].id === id) {
@@ -153,6 +163,8 @@ export const BagContextProvider = (props) => {
         SetItem,
         TotalPrice,
         totalPrice,
+        totalItems,
+        ItemsNumbers,
         value,
         setValue,
         RatingValue,
