@@ -1,3 +1,17 @@
+
+
+
+react responsive e-commerce website allow users to add items to card ,delete items and purchase for them .
+
+the website is protected by authorization and connected to firebase so to sign in you have to create new account
+
+or simply type :
+
+username: abc222@gmail.com
+
+password: 123456.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
