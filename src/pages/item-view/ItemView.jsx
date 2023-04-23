@@ -36,10 +36,10 @@ const ItemView = () => {
   }, []);
   return (
     <>
-      <motion.div className="grid grid-home"
-        initial={{width: '0'}}
-        animate={{width: '100%'}}
-        exit = {{x : window.innerWidth,transition:{duration:0.2}}}
+      <div className="grid grid-home"
+       // initial={{width: '0'}}
+       // animate={{width: '100%'}}
+       // exit = {{x : window.innerWidth,transition:{duration:0.2}}}
       >
         <SideBar />
         <div className="itemview-content">
@@ -135,7 +135,7 @@ const ItemView = () => {
           </div>
         </div>
         <Bag />
-      </motion.div>
+      </div>
     </>
   );
 };
